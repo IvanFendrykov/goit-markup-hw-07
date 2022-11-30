@@ -12,18 +12,10 @@
 }
 
 body{
-    background: #E5E5E5;
-    color:#2E2F42;
+    background-color: var(--btn-primary-color);
+    color:var(--title-text-color);
 
     font-family: "Roboto", sans-serif;
-    letter-spacing: 0.02em;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-                               /* site header */
-.site-header{
-    background: #ffffff;
 }
                                 /* list */
 .list{
@@ -51,137 +43,151 @@ body{
     font-size: 16px;
     line-height: 1.5;
     text-decoration: none;
+    letter-spacing: 0.02em;
 }
-
-
                                 /* links */
 .links{
     color: var(--primary-text-color);
-font-size: 16px;
-line-height: 1.5;
-text-decoration: none;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    letter-spacing: 0.02em;
 }
 .link{
     color: var(--title-text-color);
 }
-.site-header .logo:hover, .site-header .logo:focus{
+.logo:hover, .logo:focus{
     color:var(--btn-secondary-color)
 }
-.site-header .link:hover, .site-header .link:focus{
+.link:hover, .link:focus{
     color:var(--btn-secondary-color)
 }
-.site-header .links:hover, .site-header .links:focus{
+.links:hover, .links:focus{
     color:var(--btn-secondary-color)
 }
                                 /* hero */
+.hero{
+    background-color: #2E2F42;
+}
 .hero-title{
-    background: #2E2F42;
     color: #ffffff;
     text-align: center;
     font-weight: 600;
     font-size: 56px;
     line-height: 1.1;
+    letter-spacing: 0.02em;
 }
-.hero .button-primary{
+.hero .btn-primary{
     font-size: 16px;
     line-height: 1.18;
 }
                                 /* button */
-button{
-    font-family: 'Roboto';
+.button{
+    font-family: inherit;
     cursor: pointer;
     letter-spacing: 0.04em;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
 }
-.button-primary{
+.btn-primary{
     background:var(--btn-secondary-color);
     color: var(--btn-primary-color);
 }
-.button-primary:hover, 
-.button-primary:focus{
-    background: var(--btn-primary-color);
+.btn-primary:hover, 
+.btn-primary:focus{
+    background:var(--btn-secondary-color);
     color:var(--title-text-color)
 }
 
-.button-secondary{
+.btn-secondary{
     background: var(--primary-bg-color);
     color:var(--btn-secondary-color)
 }
-.button-secondary:hover,
-.button-secondary:focus{
-    background:var(--btn-secondary-color);
-    color: var(--btn-primary-color);
+.btn-secondary:hover,
+.btn-secondary:focus{
+    background: var(--primary-bg-color);
+    color:var(--title-text-color);
 }
 
                                 /* section */
-.section-title,
-.team-title{
+.section-title, .team-title{
     color: var(--title-text-color);
 
     font-weight: 600;
     font-size: 36px;
     line-height: 1.1;
+    letter-spacing: 0.02em;
     text-align: center;
     text-transform: capitalize;
 }
-.section-title{
+.card-name{
+    color: var(--title-text-color);
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.section .title{
     color: var(--title-text-color);
 
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
 }
-.section-text{
+.section-text, .work-text{
     color:var(--primary-text-color);
 
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
 }
                                 /* team */
-.team{
-    background: var(--primary-bg-color);
-}
+
 .team-name{
     color: var(--title-text-color);
 
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
+    letter-spacing: 0.02em;
     text-align: center;
 }
 .team-text{
     color: var(--primary-text-color);
 
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
 }
                                 /* work */
-.work a{
+.work .link{
     text-decoration: none;
 }
-.work-title{
+.subtitle{
     color: var(--title-text-color);
 
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
-}
-.work-text{
-    color: var(--primary-text-color);
-
-}
-.work .text{
-    color: var(--primary-bg-color);
+    letter-spacing: 0.02em;
 }
 
                                 /* footer */
 .footer{
-    background: #2E2F42;
+    background-color: #2E2F42;
 }
-
 
 .footer-text{
     color: var(--footer-text-color);
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .footer .logo{
@@ -190,6 +196,6 @@ button{
 
 .footer .logo:hover,
 .footer .logo:focus{
-    background: var(--btn-primary-color);
-    color:var(--title-text-color)
+    background: var(--title-text-color);
+    color:var(--btn-secondary-color)
 }
