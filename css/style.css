@@ -2,6 +2,11 @@
 /* second text color: #2E2F42; */
 /* background: #E5E5E5; */
 /* second background: #2E2F42; */
+*{
+    
+    box-sizing: border-box;
+}
+
 :root{
     --primary-text-color: #434455;
     --secondary-color: #2E2F42;
@@ -33,9 +38,10 @@ img{
     margin: 0;
 }
 .conteiner{
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 1158px;
+    margin: 0 auto;
     
 }
                                 /* logo */
@@ -62,6 +68,7 @@ img{
 .main-nav,.navigation{
     display: flex;
     align-items: center;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .site-nav{
@@ -95,6 +102,7 @@ img{
 
                                 /* links */
 .links{
+    display: block;
     color: var(--primary-text-color);
 
     font-size: 16px;
@@ -117,6 +125,7 @@ img{
     background-color:var(--secondary-color);
     text-align: center;
     padding: 192px 0;
+    
 }
 .hero-title{
     color:var(--primary-color);
@@ -124,8 +133,9 @@ img{
     font-size: 56px;
     line-height: 1.1;
     letter-spacing: 0.02em;
-    margin-top: 0;
-    margin-bottom:48px;
+
+    width: 492px;
+    margin: 0 auto 48px auto;
 }
 .hero .btn-primary{
     font-size: 16px;
@@ -136,7 +146,6 @@ img{
 }
                                 /* button */
 .button{
-    display: flex;
     display: inline-block;
     font-family: inherit;
     cursor: pointer;
@@ -145,25 +154,27 @@ img{
     font-size: 16px;
     line-height: 1.5;
     border-radius: 4px;
-    padding: 8px 16px;
-    text-align: center;
 }
 
 .btn-all {
     min-width: 69px;
-    
+    padding: 8px 16px;
 }
 .btn-web {
     min-width: 116px;
+    padding: 8px 16px;
 }
 .btn-app {
     min-width: 78px;
+    padding: 8px 16px;
 }
 .btn-design {
     min-width: 101px;
+    padding: 8px 16px;
 }
 .btn-marketing {
     min-width: 126px;
+    padding: 8px 16px;
 }
 .btn-primary{
     background:var(--btn-secondary-color);
@@ -189,7 +200,6 @@ img{
 .btn{    
     display: flex;
     justify-content: center;
-    margin-top: 0;
     margin-bottom: 72px;
 }
 .btn .item:not(:last-child),
@@ -202,7 +212,7 @@ img{
 
 .section{
     padding-top: 120px;
-    padding-bottom: 120px
+    padding-bottom: 120px;
 }
 
 .section.no-padding{
@@ -303,18 +313,20 @@ img{
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-top: 32px;
+    margin-top: 0;
     margin-bottom: 8px;
 }
 .work-text{
-    margin-bottom: 32px;
+
 }
 
 .cards-content{
-    padding: 16px;
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     width: 360px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
 }
 .work{
     display: flex;
@@ -334,6 +346,8 @@ img{
                                 /* footer */
 .footer{
     background-color:var(--secondary-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-text{
@@ -342,17 +356,17 @@ img{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-top: 16px;
-    margin-bottom: 0;
     width: 264px;
+    margin: 16px 0 0 0;
 }
 .footer-box{
-    padding-top: 100px;
-    padding-bottom: 100px;
+
 }
 
 .footer .logo{
     color:var(--primary-bg-color);
+    padding: 0;
+    
 }
 
 .footer .logo:hover,
