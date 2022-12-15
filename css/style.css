@@ -15,7 +15,10 @@
     --btn-secondary-color: #4D5AE5;
     --btn-focus-color:#404BBF;
     --primary-bg-color: #f4F4FD;
-    --card-set-gap: 15px;
+    --logo-bg-color:#8E8F99;
+    --logo-footer-color:#31D0AA;
+    --card-set-gap: 24px;
+    --card-set-gap-bottom: 48px
 }
 
 body{
@@ -29,6 +32,9 @@ img{
     display: block;
     max-width: 100%;
     height: auto;
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
 }
 
                                 /* list */
@@ -65,10 +71,13 @@ img{
 }
 
                                 /* site nav */
+.site-header{
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .main-nav,.navigation{
     display: flex;
     align-items: center;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .site-nav{
@@ -127,6 +136,18 @@ img{
     padding: 192px 0;
     
 }
+.overlay{
+    height: 603px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(47, 46, 66, 0.7)),
+        url(../images/people-office\ 1-min.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .hero-title{
     color:var(--primary-color);
     font-weight: 500;
@@ -181,6 +202,7 @@ img{
     color: var(--primary-color);
     border: 1px solid transparent;
 }
+
 .btn-primary:hover, 
 .btn-primary:focus,
 .btn-primary:active{
@@ -202,9 +224,12 @@ img{
     justify-content: center;
     margin-bottom: 72px;
 }
+
 .btn .item:not(:last-child),
 .goals .item:not(:last-child),
-.card-list .item:not(:last-child){
+.card-list .item:not(:last-child),
+.customer-logo:not(:last-child),
+.icon-logo:not(:last-child){
     margin-right: 24px;
 }
 
@@ -218,10 +243,11 @@ img{
 .section.no-padding{
     padding-top: 0;
 }
+
 .section-title{
     color: var(--secondary-color);
 
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
     letter-spacing: 0.02em;
@@ -238,8 +264,21 @@ img{
 .goals{
     display: flex;
 }
+
 .goals .item{
     width: 264px;
+}
+
+.goals-icon{
+    background-color: var(--primary-bg-color);
+    border-radius: 4px;
+}
+
+.goals .icon{
+    padding: 24px 100px;
+    margin: 0;
+    width: 100%;
+    height: 112px;
 }
 
 .card-name, .team-name{
@@ -260,6 +299,7 @@ img{
     font-size: 20px;
     line-height: 1.2;
 }
+
 .section-text, .work-text{
     color:var(--primary-text-color);
 
@@ -274,11 +314,12 @@ img{
 .team{
     background-color: var(--primary-bg-color);
 }
+
 .team-name{
     text-align: center;
     margin-top: 0;
-    
 }
+
 .team-text{
     color: var(--primary-text-color);
 
@@ -288,24 +329,79 @@ img{
     letter-spacing: 0.02em;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     padding-bottom: 0;
 
 }
-.card-list{
-    display: flex;
-}
+
 .card-content{
     background-color: var(--primary-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
     padding: 32px 16px;
+}
 
+.card-list{
+    display: flex;    
 }
+
+.icon-list{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-logo{
+    width: 40px;
+    height: 40px;
+}
+
+.icon-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--btn-secondary-color);
+    fill: var(--primary-bg-color);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.customer-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.customer-logo{
+    width: 168px;
+    height: 88px;
+    padding: 0;
+    margin: 0;
+}
+
+.customer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--logo-bg-color);
+    border-radius: 4px;
+    fill: var(--logo-bg-color);
+}
+
+.customer-link:hover,
+.customer-link:focus{
+    border: 1px solid var(--btn-secondary-color);
+    fill: var(--btn-secondary-color)
+}
+
                                 /* work */
-.work .link{
-    text-decoration: none;
-}
+
+
 .subtitle{
     color: var(--secondary-color);
 
@@ -316,18 +412,23 @@ img{
     margin-top: 0;
     margin-bottom: 8px;
 }
-.work-text{
-
-}
 
 .cards-content{
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    width: 360px;
+    max-width: 360px;
+    margin: 0;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 16px;
 }
+
+.cards-content:hover,
+.cards-content:focus{
+    border: 0.5px solid #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .work{
     display: flex;
     flex-wrap: wrap;
@@ -335,12 +436,18 @@ img{
     padding: 0;
     margin-left: calc(-1 *var(--card-set-gap)
     );
-    margin-top: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap-bottom));
 }
+
 .work > .item{
     flex-basis: calc( 100% / 3 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap);
+    margin-top: var(--card-set-gap-bottom);
+}
+
+.work .link{
+    text-decoration: none;
+
 }
 
                                 /* footer */
@@ -350,6 +457,9 @@ img{
     padding-bottom: 100px;
 }
 
+.footer-list{
+    display: flex;
+}
 .footer-text{
     color: var(--footer-text-color);
 
@@ -358,9 +468,6 @@ img{
     letter-spacing: 0.02em;
     width: 264px;
     margin: 16px 0 0 0;
-}
-.footer-box{
-
 }
 
 .footer .logo{
@@ -374,3 +481,53 @@ img{
     background: var(--secondary-color);
     color:var(--btn-secondary-color)
 }
+
+.social-text{
+    color: var(--primary-color);
+
+font-weight: 600;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+margin-top: 0;
+margin-bottom: 16px;
+padding: 0;
+}
+
+.social-box{
+    margin-left: 120px;
+}
+
+.social-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.social-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.social-logo:not(:last-child){
+    margin-right: 16px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    fill: var(--primary-bg-color) ;
+    border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus{
+    background-color: var(--logo-footer-color);
+}
+
