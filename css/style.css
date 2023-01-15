@@ -33,9 +33,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
+
 }
 
 /* list */
@@ -51,7 +49,7 @@ img {
   margin-right: auto;
 }
 
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 480px) {
   .conteiner{
     width: 428px;
   }
@@ -64,7 +62,7 @@ img {
 
   @media screen and (min-width: 768px) { 
     .conteiner{ 
-      width: 768px;
+      width: 731px;
       padding: 0 15px;
     }
   }
@@ -374,6 +372,7 @@ img {
 }
 
 .section.no-padding {
+  padding-bottom: 0;
   padding-top: 0;
 }
 
@@ -392,11 +391,14 @@ img {
 
 /* goals */
 
-.goals .item{
+.goals-item{
   margin-bottom: 72px;
 }
 
-
+.goals-item.nopadding{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 .card-name,
 .team-name {
   color: var(--secondary-color);
@@ -445,7 +447,7 @@ img {
     display: flex;
   }
   
-  .goals .item {
+  .goals-item {
     width: 264px;
   
   }
@@ -468,7 +470,11 @@ img {
     background-color: var(--primary-bg-color);
     
   }
-  
+  .card-list-img{
+    margin: 0 auto;
+  }
+
+
   .team-name {
     text-align: center;
     margin-top: 0;
@@ -495,20 +501,20 @@ img {
     border-radius: 0px 0px 4px 4px;
     padding: 32px 16px;
     margin-bottom: 72px;
-
-  }
-  .item-card{
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
-  .card-list-img{
 
+  .card-content.no-margin{
+    margin-bottom: 0;
   }
   
-  .card-list {
-    padding: 0;
+  /* .card-list {
+    display: flex;
+  } */
 
-    /* display: flex; */
+  .item-card{
+    margin: 0 auto;
   }
 
   .icon-list {
@@ -544,16 +550,16 @@ img {
   .customer-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
+    column-gap: 16px;
+    row-gap: 72px;
     margin: 0 auto;
+
   }
   
   .customer-logo {
     width: 190px;
     height: 88px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 72px;
+    margin: 0 auto;
   }
 
   .customer-link {
@@ -570,17 +576,22 @@ img {
     transition-timing-function: var(--cubic-time-bezier);
   }
 
+  @media screen and (min-width:768px) {
+    .customer-list{
+      column-gap: 24px;
+    }
+    .customer-logo {
+      width: 168px;
+    }
+    .custom-logo{
+      width: 104px;
+    }
+  }
 @media screen and (min-width: 1200px) {
   .customer-list{
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .customer-logo{
-    width: 168px;
-  }
-  .customer-logo:not(:last-child){
-    margin-right: 24px;
   }
 }
   
@@ -977,9 +988,9 @@ img {
     padding: 0;
   }
   
-  .social-box {
-    /* margin-left: 120px; */
-  }
+  /* .social-box {
+    margin-left: 120px;
+  } */
   
   .social-list {
     display: flex;
@@ -1042,9 +1053,9 @@ img {
     transition-timing-function: var(--cubic-time-bezier);
   }
   
-  .subscribe-form {
-    /* display: flex; */
-  }
+  /* .subscribe-form {
+    display: flex;
+  } */
   .subcribe-text {
     color: var(--primary-color);
     font-weight: 500;
@@ -1088,3 +1099,74 @@ img {
     height: 24px;
   
   }
+
+  @media screen and (max-width: 767px){
+  .mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform-origin: top right;
+    scale: 0;
+    width: 100%;
+    height: 99vh;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    background: #ffffff;
+    box-shadow: 0px 2px 1px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%), 0px 1px 6px rgb(46 47 66 / 8%);
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1), scale 350ms cubic-bezier(0.4, 0, 0.2, 1), visibility 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media screen and (max-width: 767px){
+.mobile-menu-container.js-menu-container.is-open {
+    opacity: 1;
+    visibility: visible;
+    scale: 100%;
+    transform-origin: top right;
+    pointer-events: initial;
+}
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}

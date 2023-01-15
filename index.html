@@ -25,7 +25,9 @@
           <a href="./index.html" class="logo"
             ><span class="web">Web</span>Studio</a
           >
-          <button type="button" class="menu-hamburger">
+          <button type="button" class="menu-hamburger" class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
             <svg class="img-hamburger" width="32" height="22">
               <use class="hamburger-cross" href="./images/symbol-defs.svg#icon-charm_menu-hamburger"></use>
             </svg>
@@ -69,7 +71,7 @@
         <div class="conteiner">
           <h2 class="section-title titles">our goals</h2>
           <ul class="goals list">
-            <li class="item">
+            <li class="goals-item">
               <div class="goals-icon">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/symbol-defs.svg#icon-antenna"></use>
@@ -81,7 +83,7 @@
                 the perfect and creative solution.
               </p>
             </li>
-            <li class="item">
+            <li class="goals-item">
               <div class="goals-icon">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/symbol-defs.svg#icon-clock"></use>
@@ -93,7 +95,7 @@
                 within the shortest possible time.
               </p>
             </li>
-            <li class="item">
+            <li class="goals-item">
               <div class="goals-icon">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/symbol-defs.svg#icon-diagram"></use>
@@ -105,7 +107,7 @@
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li class="item">
+            <li class="goals-item nopadding">
               <div class="goals-icon">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/symbol-defs.svg#icon-astronaut"></use>
@@ -204,8 +206,9 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="item-card">
               <img
+              class="card-list-img"
                 src="./images/tom.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -252,8 +255,9 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="item-card">
               <img
+              class="card-list-img"
                 src="./images/camila.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -300,14 +304,15 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="item-card">
               <img
+              class="card-list-img"
                 src="./images/daniel.jpg"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
               />
-              <div class="card-content">
+              <div class="card-content no-margin">
                 <h3 class="team-name">Daniel Wilson</h3>
                 <p class="team-text">UI Designer</p>
                 <ul class="icon-list list">
@@ -357,42 +362,42 @@
           <ul class="customer-list list">
             <li class="customer-logo">
               <a href="" class="customer-link">
-                <svg class="custom-logo" width="104" height="56">
+                <svg class="custom-logo" width="110" height="56">
                   <use href="./images/symbol-defs.svg#icon-yaco"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-logo">
               <a href="#" class="customer-link">
-                <svg class="custom-logo" width="104" height="56">
+                <svg class="custom-logo" width="110" height="56">
                   <use href="./images/symbol-defs.svg#icon-tagline"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-logo">
               <a href="#" class="customer-link">
-                <svg class="custom-logo" width="104" height="56">
+                <svg class="custom-logo" width="110" height="56">
                   <use href="./images/symbol-defs.svg#icon-company"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-logo">
               <a href="#" class="customer-link">
-                <svg class="custom-logo" width="104" height="56">
+                <svg class="custom-logo" width="110" height="56">
                   <use href="./images/symbol-defs.svg#icon-foster"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-logo">
               <a href="#" class="customer-link">
-                <svg class="custom-logo" width="104" height="56">
+                <svg class="custom-logo" width="110" height="56">
                   <use href="./images/symbol-defs.svg#icon-brand"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-logo">
               <a href="#" class="customer-link">
-                <svg class="custom-logo" width="104" height="56">
+                <svg class="custom-logo" width="110" height="56">
                   <use href="./images/symbol-defs.svg#icon-companyline"></use>
                 </svg>
               </a>
@@ -551,6 +556,69 @@
         </button>
       </div>
     </div>
+    <div class="mobile-menu-container js-menu-container" id="mobile-menu">
+      <button class="btn-icon menu-toggle js-close-menu">
+        <svg class="icon-close" width="8" height="8">
+          <use href="./images/symbol-defs.svg#icon-Vector-1"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu list">
+        <li class="mobile-link">
+          <a href="./index.html" class="link-page current-page">Studio</a>
+        </li>
+        <li class="mobile-link">
+          <a href="./portfolio.html" class="link-page">Portfolio</a>
+        </li>
+        <li class="mobile-link"><a href="#" class="link-page">Contacts</a></li>
+      </ul>
+    </nav>
+    <ul class="mobile-menu list">
+      <li class="mobile-menu-link">
+        <a href="mailto:info@devstudio.com" class="links"
+          >info@devstudio.com</a
+        >
+      </li>
+      <li class="mobile-menu-link">
+        <a href="tel:+11(000)111-11-11" class="links"
+          >+11 (000) 111-11-11</a
+        >
+      </li>
+    </ul>
+    <ul class="social-list list">
+      <li class="social-logo">
+        <a href="#" class="social-link">
+          <svg class="social-img" width="24" height="24">
+            <use href="./images/symbol-defs.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="social-logo">
+        <a href="#" class="social-link">
+          <svg class="social-img" width="24" height="24">
+            <use href="./images/symbol-defs.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="social-logo">
+        <a href="#" class="social-link">
+          <svg class="social-img" width="24" height="24">
+            <use href="./images/symbol-defs.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="social-logo">
+        <a href="#" class="social-link">
+          <svg class="social-img" width="24" height="24">
+            <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
